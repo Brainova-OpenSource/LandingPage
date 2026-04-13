@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BakeryManager – Brainova | Gestión Inteligente para Panaderías</title>
+  <meta name="description" content="BakeryManager es la plataforma web de gestión empresarial para panaderías y PYMES. Controla inventarios, ventas, producción y monitoreo IoT desde un solo lugar." />
+  <meta name="keywords" content="gestión panadería, software panadería, inventario, ventas, IoT, ERP PYME, Perú" />
+  <meta property="og:title" content="BakeryManager – Gestión Inteligente para Panaderías" />
+  <meta property="og:description" content="Centraliza tu panadería: ventas, inventarios, producción y sensores IoT en una sola plataforma." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+<!-- ══════════ NAV ══════════ -->
+<nav>
+  <div class="container nav-inner">
+    <a href="#" class="logo" aria-label="BakeryManager - Inicio">
+      <div class="logo-icon">🍞</div>
+      <div>
+        <div class="logo-text">BakeryManager</div>
+        <div class="logo-sub">by Brainova</div>
+      </div>
+    </a>
+    <ul class="nav-links" role="navigation" aria-label="Menú principal">
+      <li><a href="#caracteristicas">Características</a></li>
+      <li><a href="#nosotros">Sobre nosotros</a></li>
+      <li><a href="#segmentos">Para quién</a></li>
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="#planes" class="nav-cta">Comenzar ahora</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy fade-up">
+        <div class="hero-eyebrow">
+          <div class="dot"></div>
+          <span style="font-size:0.78rem;font-weight:600;color:var(--ash);letter-spacing:0.08em;text-transform:uppercase;">Plataforma web ERP · IoT · Multisede</span>
+        </div>
+        <h1 id="hero-heading">
+          Gestiona tu panadería con<em> inteligencia real</em>
+        </h1>
+        <p>
+          BakeryManager centraliza ventas, inventarios, producción y monitoreo de maquinaria en una sola plataforma diseñada para panaderías y PYMES en crecimiento.
+        </p>
+        <div class="hero-ctas">
+          <a href="#planes" class="btn-primary">Comenzar ahora →</a>
+          <a href="#caracteristicas" class="btn-secondary">Ver características</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">100k+</span>
+            <span class="stat-desc">PYMES cierran cada año<br>por falta de gestión</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">S/2.6M</span>
+            <span class="stat-desc">pérdidas diarias en el<br>sector panadero peruano</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">1</span>
+            <span class="stat-desc">plataforma para controlar<br>todo tu negocio</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard visual -->
+      <div class="hero-visual fade-up" style="transition-delay:0.2s">
+        <div class="sensor-chip">
+          <div class="temp-dot"></div>
+          🌡 Horno 1 — 220°C · Activo
+        </div>
+        <div class="dashboard-card">
+          <div class="dc-header">
+            <div class="dc-title">Dashboard · Hoy</div>
+            <div class="dc-badge">● En línea</div>
+          </div>
+          <div class="dc-metrics">
+            <div class="metric-box">
+              <div class="metric-label">Ventas</div>
+              <div class="metric-val">S/1,840</div>
+              <div class="metric-sub">↑ 12% vs ayer</div>
+            </div>
+            <div class="metric-box green">
+              <div class="metric-label">Boletas</div>
+              <div class="metric-val">127</div>
+              <div class="metric-sub">Transacciones</div>
+            </div>
+            <div class="metric-box red">
+              <div class="metric-label">Stock bajo</div>
+              <div class="metric-val">3</div>
+              <div class="metric-sub">Reponer hoy</div>
+            </div>
+          </div>
+          <div style="font-size:0.72rem;color:var(--ash);margin-bottom:8px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;">Ventas por hora</div>
+          <div class="chart-area" aria-hidden="true">
+            <div class="bar" style="height:30%"></div>
+            <div class="bar" style="height:50%"></div>
+            <div class="bar" style="height:45%"></div>
+            <div class="bar active" style="height:80%"></div>
+            <div class="bar active" style="height:95%"></div>
+            <div class="bar" style="height:70%"></div>
+            <div class="bar" style="height:60%"></div>
+            <div class="bar" style="height:40%"></div>
+          </div>
+        </div>
+        <div class="float-badge" aria-live="polite">
+          <div class="alert-dot"></div>
+          ⚠ Alerta: Harina bajo mínimo en Sede 2
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT BRAINOVA ══════════ -->
+<section class="about" id="nosotros" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="tag">Sobre Brainova</div>
+      <h2 id="about-heading">¿Quiénes somos?</h2>
+      <p>Un equipo de estudiantes de ingeniería de la UPC comprometidos con digitalizar los negocios que mueven el Perú.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-card fade-up">
+        <div class="about-icon">🎓</div>
+        <h4>Nacimos en la UPC</h4>
+        <p>Somos estudiantes de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas, convencidos de que la tecnología puede transformar las PYMES.</p>
+      </div>
+      <div class="about-card fade-up" style="transition-delay:0.1s">
+        <div class="about-icon">💡</div>
+        <h4>Nuestra misión</h4>
+        <p>Desarrollar herramientas digitales que optimicen la gestión de negocios en crecimiento, mejorando sus procesos y facilitando la administración de múltiples sedes.</p>
+      </div>
+      <div class="about-card fade-up" style="transition-delay:0.2s">
+        <div class="about-icon">🚀</div>
+        <h4>Nuestra visión</h4>
+        <p>Ser la solución tecnológica líder en la digitalización de pequeños y medianos negocios en expansión, promoviendo una gestión eficiente y basada en datos.</p>
+      </div>
+      <div class="about-card fade-up" style="transition-delay:0.3s">
+        <div class="about-icon">🍞</div>
+        <h4>BakeryManager</h4>
+        <p>Nuestro primer producto enfocado en panaderías y pastelerías, integrando gestión de ventas, inventarios y monitoreo IoT en una sola plataforma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PAIN POINTS ══════════ -->
+<section class="pain-band" id="problemas" aria-labelledby="problems-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="tag" style="background:rgba(255,255,255,0.1);color:var(--wheat)">El problema real</div>
+      <h2 id="problems-heading">¿Por qué las panaderías pierden dinero hoy?</h2>
+      <p>Procesos fragmentados, sin visibilidad real ni alertas a tiempo.</p>
+    </div>
+    <div class="pains-grid">
+      <div class="pain-card fade-up">
+        <div class="pain-icon">📋</div>
+        <h3>Registros manuales</h3>
+        <p>Cuadernos y hojas de cálculo sin integración generan errores y pérdida de información crítica diariamente.</p>
+      </div>
+      <div class="pain-card fade-up" style="transition-delay:0.1s">
+        <div class="pain-icon">📦</div>
+        <h3>Inventario sin control</h3>
+        <p>Desabastecimiento silencioso, sobrestock y compras duplicadas por falta de visibilidad en tiempo real.</p>
+      </div>
+      <div class="pain-card fade-up" style="transition-delay:0.2s">
+        <div class="pain-icon">🏭</div>
+        <h3>Sin monitoreo de maquinaria</h3>
+        <p>Fallas en hornos y cámaras frigoríficas no detectadas a tiempo significan pérdidas de producción.</p>
+      </div>
+      <div class="pain-card fade-up" style="transition-delay:0.05s">
+        <div class="pain-icon">🏪</div>
+        <h3>Múltiples sedes, cero coordinación</h3>
+        <p>Gestionar dos o más locales sin sistema centralizado multiplica los errores y el esfuerzo operativo.</p>
+      </div>
+      <div class="pain-card fade-up" style="transition-delay:0.15s">
+        <div class="pain-icon">📊</div>
+        <h3>Decisiones sin datos</h3>
+        <p>Sin reportes automáticos, los dueños toman decisiones a ciegas sobre compras, personal y producción.</p>
+      </div>
+      <div class="pain-card fade-up" style="transition-delay:0.25s">
+        <div class="pain-icon">🚨</div>
+        <h3>Incidentes sin alerta</h3>
+        <p>El personal no recibe notificaciones ante fallas críticas, lo que retrasa la respuesta y aumenta el daño.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FEATURES ══════════ -->
+<section class="features" id="caracteristicas" aria-labelledby="features-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="tag">Características</div>
+      <h2 id="features-heading">Todo lo que tu panadería necesita, en un solo lugar</h2>
+      <p>Módulos integrados que cubren cada proceso, desde la venta hasta el sensor del horno.</p>
+    </div>
+
+    <div class="features-list">
+
+      <!-- Ventas -->
+      <div class="feature-row fade-up">
+        <div class="feature-content">
+          <div class="tag">Módulo de ventas</div>
+          <h3>Registro de ventas y boletas en segundos</h3>
+          <p>El cajero registra productos, el sistema calcula el total automáticamente, genera la boleta y actualiza el inventario al instante — sin errores manuales.</p>
+          <ul class="feature-bullets">
+            <li><div class="check">✓</div><span>Búsqueda rápida de productos por nombre o código</span></li>
+            <li><div class="check">✓</div><span>Cálculo automático del total de la venta</span></li>
+            <li><div class="check">✓</div><span>Generación e impresión de boleta de venta</span></li>
+            <li><div class="check">✓</div><span>Historial de ventas con filtros por fecha y cajero</span></li>
+            <li><div class="check">✓</div><span>Validación de stock antes de confirmar la venta</span></li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="fv-header">
+            <div class="fv-dot" style="background:#E74C3C"></div>
+            <div class="fv-dot" style="background:#F39C12;margin-left:4px"></div>
+            <div class="fv-dot" style="background:var(--success);margin-left:4px"></div>
+            <div class="fv-title" style="margin-left:8px">Registrar Venta</div>
+          </div>
+          <div class="sales-report">
+            <div class="sr-row"><span class="sr-name">Pan francés (x20)</span><span class="sr-qty">x20</span><span class="sr-amt">S/6.00</span></div>
+            <div class="sr-row"><span class="sr-name">Croissant mantequilla</span><span class="sr-qty">x3</span><span class="sr-amt">S/9.00</span></div>
+            <div class="sr-row"><span class="sr-name">Torta tres leches</span><span class="sr-qty">x1</span><span class="sr-amt">S/35.00</span></div>
+            <div class="sr-row"><span class="sr-name">Café americano</span><span class="sr-qty">x2</span><span class="sr-amt">S/8.00</span></div>
+          </div>
+          <div class="total-row">
+            <span>Total</span>
+            <span>S/ 58.00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventario -->
+      <div class="feature-row reverse fade-up">
+        <div class="feature-content">
+          <div class="tag">Control de inventario</div>
+          <h3>Inventario actualizado en tiempo real</h3>
+          <p>Cada venta descuenta el stock automáticamente. Recibe alertas cuando un insumo llegue al mínimo y evita el desabastecimiento que detiene tu producción.</p>
+          <ul class="feature-bullets">
+            <li><div class="check">✓</div><span>Vista de inventario actualizada al instante</span></li>
+            <li><div class="check">✓</div><span>Alertas automáticas de stock bajo o agotado</span></li>
+            <li><div class="check">✓</div><span>Búsqueda y filtros avanzados de productos</span></li>
+            <li><div class="check">✓</div><span>Historial de movimientos de inventario</span></li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="fv-header">
+            <div class="fv-dot" style="background:#E74C3C"></div>
+            <div class="fv-dot" style="background:#F39C12;margin-left:4px"></div>
+            <div class="fv-dot" style="background:var(--success);margin-left:4px"></div>
+            <div class="fv-title" style="margin-left:8px">Inventario · Sede Principal</div>
+          </div>
+          <table class="inv-table">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Stock</th>
+                <th>Mínimo</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Harina sin preparar</td>
+                <td>42 kg</td>
+                <td>10 kg</td>
+                <td><span class="stock-pill stock-ok">OK</span></td>
+              </tr>
+              <tr>
+                <td>Mantequilla</td>
+                <td>8 kg</td>
+                <td>5 kg</td>
+                <td><span class="stock-pill stock-low">Bajo</span></td>
+              </tr>
+              <tr>
+                <td>Azúcar rubia</td>
+                <td>0 kg</td>
+                <td>5 kg</td>
+                <td><span class="stock-pill stock-out">Agotado</span></td>
+              </tr>
+              <tr>
+                <td>Levadura seca</td>
+                <td>3.2 kg</td>
+                <td>1 kg</td>
+                <td><span class="stock-pill stock-ok">OK</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- IoT -->
+      <div class="feature-row fade-up">
+        <div class="feature-content">
+          <div class="tag">Monitoreo IoT</div>
+          <h3>Tus hornos y equipos bajo control 24/7</h3>
+          <p>Sensores conectados transmiten temperatura, humedad y estado operativo en tiempo real. Recibe alertas inmediatas antes de que una falla se convierta en pérdida.</p>
+          <ul class="feature-bullets">
+            <li><div class="check">✓</div><span>Temperatura de hornos y cámaras frigoríficas en vivo</span></li>
+            <li><div class="check">✓</div><span>Alertas automáticas ante condiciones críticas</span></li>
+            <li><div class="check">✓</div><span>Historial completo de eventos e incidentes</span></li>
+            <li><div class="check">✓</div><span>Estado en tiempo real: activo, inactivo, falla</span></li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="fv-header">
+            <div class="fv-dot" style="background:#E74C3C"></div>
+            <div class="fv-dot" style="background:#F39C12;margin-left:4px"></div>
+            <div class="fv-dot" style="background:var(--success);margin-left:4px"></div>
+            <div class="fv-title" style="margin-left:8px">Monitor IoT · Tiempo real</div>
+          </div>
+          <div class="iot-grid">
+            <div class="iot-sensor ok">
+              <div class="iot-name">🔥 Horno principal</div>
+              <div class="iot-val">220<span class="iot-unit">°C</span></div>
+              <div class="iot-unit" style="margin-top:4px;color:var(--success)">● Operativo</div>
+            </div>
+            <div class="iot-sensor warn">
+              <div class="iot-name">❄ Cámara fría</div>
+              <div class="iot-val">6<span class="iot-unit">°C</span></div>
+              <div class="iot-unit" style="margin-top:4px;color:var(--caramel)">⚠ Revisar</div>
+            </div>
+            <div class="iot-sensor ok">
+              <div class="iot-name">💧 Humedad sala</div>
+              <div class="iot-val">62<span class="iot-unit">%</span></div>
+              <div class="iot-unit" style="margin-top:4px;color:var(--success)">● Normal</div>
+            </div>
+            <div class="iot-sensor err">
+              <div class="iot-name">🔥 Horno 2</div>
+              <div class="iot-val">—</div>
+              <div class="iot-unit" style="margin-top:4px;color:#C0392B">✗ Sin señal</div>
+            </div>
+          </div>
+          <div style="margin-top:12px;background:#FDECEA;border-radius:8px;padding:10px 14px;font-size:0.8rem;color:#C0392B;font-weight:500;">
+            🚨 Alerta generada: Horno 2 sin señal desde hace 8 min. Revisar conexión.
+          </div>
+        </div>
+      </div>
+
+      <!-- Multisede -->
+      <div class="feature-row reverse fade-up">
+        <div class="feature-content">
+          <div class="tag">Gestión multisede</div>
+          <h3>Todas tus sedes, desde un solo panel</h3>
+          <p>Administra múltiples locales sin moverse. Visualiza el rendimiento de cada sede, su inventario y el estado de su maquinaria desde una única interfaz centralizada.</p>
+          <ul class="feature-bullets">
+            <li><div class="check">✓</div><span>Vista unificada de todas las sedes activas</span></li>
+            <li><div class="check">✓</div><span>Reportes de ventas individuales por local</span></li>
+            <li><div class="check">✓</div><span>Gestión de personal y permisos por sede</span></li>
+            <li><div class="check">✓</div><span>Inventario independiente por local con alertas cruzadas</span></li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="fv-header">
+            <div class="fv-dot" style="background:#E74C3C"></div>
+            <div class="fv-dot" style="background:#F39C12;margin-left:4px"></div>
+            <div class="fv-dot" style="background:var(--success);margin-left:4px"></div>
+            <div class="fv-title" style="margin-left:8px">Mis Sedes</div>
+          </div>
+          <div class="sede-list">
+            <div class="sede-item">
+              <div>
+                <div class="sede-name">🏪 Sede Principal — Miraflores</div>
+                <div class="sede-info">Ventas hoy: S/1,840 · 6 cajeros activos</div>
+              </div>
+              <div class="sede-status"><div class="status-dot"></div>Activa</div>
+            </div>
+            <div class="sede-item">
+              <div>
+                <div class="sede-name">🏪 Sede 2 — San Isidro</div>
+                <div class="sede-info">Ventas hoy: S/980 · ⚠ Stock bajo: Harina</div>
+              </div>
+              <div class="sede-status"><div class="status-dot"></div>Activa</div>
+            </div>
+            <div class="sede-item">
+              <div>
+                <div class="sede-name">🏪 Sede 3 — Surco</div>
+                <div class="sede-info">Ventas hoy: S/640 · 3 cajeros activos</div>
+              </div>
+              <div class="sede-status"><div class="status-dot"></div>Activa</div>
+            </div>
+          </div>
+          <div style="margin-top:14px;padding:10px 14px;background:var(--cream);border-radius:8px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:0.82rem;color:var(--ash);">Total hoy (todas las sedes)</span>
+            <span style="font-family:var(--ff-display);font-size:1.1rem;font-weight:700;color:var(--espresso)">S/ 3,460</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SEGMENTS ══════════ -->
+<section class="segments" id="segmentos" aria-labelledby="segments-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="tag">Para quién es</div>
+      <h2 id="segments-heading">Diseñado para cada rol de tu panadería</h2>
+      <p>Dos experiencias optimizadas para quienes dirigen y quienes operan.</p>
+    </div>
+    <div class="seg-cards">
+      <div class="seg-card admin fade-up">
+        <div class="tag" style="background:rgba(44,26,14,0.15);color:var(--espresso)">Propietarios y Administradores</div>
+        <h3>Control total del negocio</h3>
+        <p>Supervisa todas tus sedes, toma decisiones basadas en datos y detecta incidentes antes de que generen pérdidas.</p>
+        <ul class="seg-needs">
+          <li><div class="check" style="background:var(--espresso)">✓</div><span>Panel centralizado de todas las sedes</span></li>
+          <li><div class="check" style="background:var(--espresso)">✓</div><span>Reportes automáticos de ventas y producción</span></li>
+          <li><div class="check" style="background:var(--espresso)">✓</div><span>Alertas IoT en tiempo real</span></li>
+          <li><div class="check" style="background:var(--espresso)">✓</div><span>Gestión de personal y permisos</span></li>
+          <li><div class="check" style="background:var(--espresso)">✓</div><span>Historial completo de incidentes</span></li>
+        </ul>
+      </div>
+      <div class="seg-card operativo fade-up" style="transition-delay:0.15s">
+        <div class="tag" style="background:rgba(255,255,255,0.12);color:var(--wheat)">Personal Operativo — Cajeros y Producción</div>
+        <h3>Trabajo sin fricciones</h3>
+        <p>Interfaz simple e intuitiva que permite registrar ventas, consultar inventario y reportar incidencias sin formación técnica avanzada.</p>
+        <ul class="seg-needs">
+          <li><div class="check" style="background:var(--caramel)">✓</div><span>Registro de ventas rápido e intuitivo</span></li>
+          <li><div class="check" style="background:var(--caramel)">✓</div><span>Consulta de stock en tiempo real</span></li>
+          <li><div class="check" style="background:var(--caramel)">✓</div><span>Alertas de incidencias en producción</span></li>
+          <li><div class="check" style="background:var(--caramel)">✓</div><span>Generación de boletas sin errores</span></li>
+          <li><div class="check" style="background:var(--caramel)">✓</div><span>Acceso solo a lo que corresponde por rol</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ QUOTE BAND ══════════ -->
+<section class="quote-band" aria-label="Estadística del sector">
+  <div class="container">
+    <blockquote>
+      "La industria panadera ha perdido S/ 2.6 millones diarios. La digitalización no es una opción, es la única salida."
+    </blockquote>
+    <cite>— ASPAN · Asociación Peruana de Empresarios de la Panadería</cite>
+  </div>
+</section>
+
+<!-- ══════════ PRICING ══════════ -->
+<section class="pricing" id="planes" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="tag">Planes</div>
+      <h2 id="pricing-heading">Elige el plan que crece contigo</h2>
+      <p>Sin contratos largos. Cancela cuando quieras.</p>
+    </div>
+    <div class="plans">
+      <div class="plan-card fade-up">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price"><sup>S/</sup>89</div>
+        <div class="plan-period">por mes · 1 sede</div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span> Gestión de ventas e inventario</li>
+          <li><span class="plan-check">✓</span> Generación de boletas</li>
+          <li><span class="plan-check">✓</span> Hasta 3 usuarios</li>
+          <li><span class="plan-check">✓</span> Reportes básicos</li>
+          <li><span class="plan-check">✓</span> Soporte por email</li>
+        </ul>
+        <a href="#contacto" class="btn-secondary" style="width:100%;text-align:center;display:block;padding:12px">Comenzar</a>
+      </div>
+
+      <div class="plan-card featured fade-up" style="transition-delay:0.1s">
+        <div class="plan-name">Business</div>
+        <div class="plan-price"><sup>S/</sup>199</div>
+        <div class="plan-period">por mes · hasta 3 sedes</div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span> Todo lo de Starter</li>
+          <li><span class="plan-check">✓</span> Gestión multisede</li>
+          <li><span class="plan-check">✓</span> Monitoreo IoT de maquinaria</li>
+          <li><span class="plan-check">✓</span> Alertas automáticas en tiempo real</li>
+          <li><span class="plan-check">✓</span> Hasta 15 usuarios</li>
+          <li><span class="plan-check">✓</span> Reportes avanzados</li>
+          <li><span class="plan-check">✓</span> Soporte prioritario</li>
+        </ul>
+        <a href="#contacto" class="btn-primary" style="width:100%;text-align:center;display:block;padding:12px;background:var(--caramel)">Elegir Business</a>
+      </div>
+
+      <div class="plan-card fade-up" style="transition-delay:0.2s">
+        <div class="plan-name">Enterprise</div>
+        <div class="plan-price" style="font-size:1.8rem;padding-top:8px">A medida</div>
+        <div class="plan-period">sedes ilimitadas · API</div>
+        <ul class="plan-features">
+          <li><span class="plan-check">✓</span> Todo lo de Business</li>
+          <li><span class="plan-check">✓</span> Sedes ilimitadas</li>
+          <li><span class="plan-check">✓</span> Integraciones personalizadas</li>
+          <li><span class="plan-check">✓</span> API de acceso a datos</li>
+          <li><span class="plan-check">✓</span> Usuarios ilimitados</li>
+          <li><span class="plan-check">✓</span> Soporte dedicado 24/7</li>
+        </ul>
+        <a href="#contacto" class="btn-secondary" style="width:100%;text-align:center;display:block;padding:12px">Hablar con ventas</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer aria-label="Pie de página">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" style="margin-bottom:12px;display:inline-flex">
+          <div class="logo-icon">🍞</div>
+          <div style="margin-left:10px">
+            <div class="logo-text">BakeryManager</div>
+            <div class="logo-sub">by Brainova · UPC</div>
+          </div>
+        </a>
+        <p>Plataforma web ERP para panaderías y PYMES en crecimiento. Gestión centralizada, monitoreo IoT y decisiones basadas en datos.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Producto</h5>
+        <ul>
+          <li><a href="#caracteristicas">Características</a></li>
+          <li><a href="#nosotros">Sobre nosotros</a></li>
+          <li><a href="#planes">Planes y precios</a></li>
+          <li><a href="#segmentos">Para quién es</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#">Sobre Brainova</a></li>
+          <li><a href="#">Equipo</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Términos de uso</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Brainova — Universidad Peruana de Ciencias Aplicadas</span>
+      <span>Hecho con 🍞 en Lima, Perú</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════ SCRIPTS ══════════ -->
+<script>
+  // Intersection Observer for fade-up animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
